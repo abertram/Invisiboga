@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Invisiboga</string>
+    <string name="next">Weiter</string>
+    <string name="dice">Würfeln</string>
+    <string name="restart">Neustart</string>
+</resources>

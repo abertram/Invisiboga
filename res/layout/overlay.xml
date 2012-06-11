@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_height="wrap_content" android:layout_width="match_parent">
+    <Button android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:id="@+id/nextButton" android:text="@string/next"></Button>
+    <Button android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_alignParentBottom="true" android:id="@+id/diceButton" android:text="@string/dice"></Button>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:id="@+id/restartButton" android:text="@string/restart"></Button>
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentTop="true" android:layout_alignParentLeft="true" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_margin="2.5dp" android:padding="2.5dp" android:background="#D555" android:id="@+id/currentPlayerTextView"></TextView>
+</RelativeLayout>

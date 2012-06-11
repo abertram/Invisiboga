@@ -1,0 +1,55 @@
+Es gibt zwei Möglichkeiten, Invisiboga zu compilieren und auf einem Android-Gerät zu installieren:
+
+    1. Eclipse
+    2. Apache Ant
+
+    Hier wird nur die zweite Möglichkeit beschrieben, weil die Einrichtung einfacher ist und
+    lediglich ein paar Handgriffe erfordert.
+
+    Voraussetzungen
+
+        - Windows als Betriebssystem
+        - keine Leerzeichen im Invisiboga-Pfad
+        - korrekt installiertes Apache Ant wie auf
+            http://ant.apache.org/manual/install.html#installing beschrieben
+        - korrekt installiertes Cygwin (inklusive Devel-Zweig) und eine Umgebungsvariable
+            "CYGWIN_HOME", die auf das Cygwin-Installationsverzeichnis zeigt
+        - Entpacken des Archivs "android-sdk-windows.zip" aus dem Ornder "dks" (Development Kits)
+            in den Ordner "dks"
+        - vorhandenes Android-Gerät mit mindestens Android 2.2
+
+    Compilation der Debug-Version
+
+        Aufruf von "ant debug" im Invisiboga-Verzeichnis.
+        Sollte während der Erstellung die Fehlermeldung "Debug Certificate expired on ..."
+        erscheinen, so muss die Datei "debug.keystore" gelöscht werden. Diese ist im Verzeichnis
+        "C:\Documents and Settings\<user>\.android" unter Windows XP oder
+        "C:\Users\<user>\.android" unter Windows Vista bzw. Windows 7 zu finden. Anschließend noch
+        mal "ant debug" im Invisiboga-Verzeichnis ausführen.
+
+    Installation der Debug-Version auf einem Android Gerät
+
+        Anschluss eines Android-Gerätes an den Computer und Aufruf von "ant installd" im
+        Invisiboga-Verzeichnis
+
+    Erstellen der HTML-Dokumentation
+
+        Java
+
+            Aufruf von "ant java-doc" im Invisiboga-Verzeichnis. Die Dokumentation kann anschließend
+            über die Datei "doc/index.html" aufgerufen werden.
+
+        Nativ
+
+            Für die Erzeugung der nativen Dokumentation ist das Tool Doxygen notwendig. Dieses muss
+            in einem Verzeichnis ohne Leerzeichen installiert sein. Zusätzlich ist die
+            Umgebungsvariable "DOXYGEN_HOME" notwendig, die auf das Doxygen-Installationsverzeichnis
+            zeigt.
+            Aufruf von "ant native-doc" im Invisiboga-Verzeichnis. Die Dokumentation kann
+            anschließend über die Datei "doc/jni/html/index.html" aufgerufen werden.
+
+        Sowohl Java als auch native Dokumentation
+
+          Voraussetzungen: siehe Voraussetzungen für native Dokumentation.
+          Aufruf von "ant doc" im Invisiboga Verzeichnis. Aufruf: siehe Aufruf der Java- und der
+          nativen Dokumentation.
